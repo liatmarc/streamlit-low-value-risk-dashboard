@@ -10,17 +10,34 @@ st.set_page_config(
 )
 
 # Style overrides: hide default H1 and apply custom styles
-
 st.markdown("""
-    <div style="display: flex; align-items: center; gap: 1rem;">
-        <img src="https://www.medstarhealth.org/-/media/project/mho/medstar/logos/medstar-health-logo.png" alt="MedStar Logo" width="180"/>
-        <div>
-            <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
-            <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
+    <style>
+    .header-container {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .header-text h1 {
+        font-size: 2.2rem;
+        color: #002D72;
+        margin: 0;
+    }
+    .header-text p {
+        font-size: 1.1rem;
+        color: #444;
+        margin-top: 0.2rem;
+    }
+    </style>
+
+    <div class="header-container">
+        <img src="https://raw.githubusercontent.com/liatmarc/streamlit-low-value-risk-dashboard/main/medstar_logo.png" width="160">
+        <div class="header-text">
+            <h1>Pediatric Risk of Low-Value Diagnostic Testing</h1>
+            <p>Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</p>
         </div>
     </div>
 """, unsafe_allow_html=True)
-
 
 
 # Load data
