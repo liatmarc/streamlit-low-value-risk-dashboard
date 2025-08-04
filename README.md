@@ -1,4 +1,4 @@
-Interactive dashboard to monitor risk of low-value diagnostic testing in pediatric care
+
 # Pediatric Risk Dashboard: Low-Value Diagnostic Testing
 
 This interactive Streamlit app helps visualize the predicted risk of low-value diagnostic tests in a pediatric population. It is designed to support quality and safety teams in identifying areas of overuse, improving care coordination, and promoting value-based decision-making.
