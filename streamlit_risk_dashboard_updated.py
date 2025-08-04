@@ -4,6 +4,30 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Streamlit page config
+st.set_page_config(
+    page_title="Pediatric Risk Dashboard",
+    layout="wide"
+)
+
+# Custom header
+st.markdown("""
+    <style>
+    .main h1 {
+        font-size: 2.5rem;
+        color: #0072B5;
+        margin-bottom: 0;
+    }
+    .main .subtitle {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 0;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("Pediatric Risk of Low-Value Diagnostic Testing")
+st.markdown('<div class="subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>', unsafe_allow_html=True)
 # Load data
 df = pd.read_csv("dashboard_risk_summary_sample.csv")
 
