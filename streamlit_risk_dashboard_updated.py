@@ -35,6 +35,15 @@ st.markdown("""
     <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
     <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
 """, unsafe_allow_html=True)
+st.markdown("""
+    <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="https://www.medstarhealth.org/-/media/project/mho/medstar/logos/medstar-health-logo.png" alt="MedStar Logo" width="180"/>
+        <div>
+            <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
+            <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
 
 
 
@@ -61,7 +70,7 @@ col1, col2 = st.columns([1, 2])
 with col1:
     st.subheader("Risk Distribution")
     fig1, ax1 = plt.subplots()
-    sns.histplot(df['predicted_risk'], bins=20, kde=False, ax=ax1, color='skyblue')
+    sns.histplot(df['predicted_risk'], bins=20, kde=False, ax=ax1, color='#002D72')
     ax1.set_xlabel("Predicted Risk")
     ax1.set_ylabel("Patient Count")
     st.pyplot(fig1)
@@ -71,7 +80,7 @@ with col2:
     st.subheader("Age vs. Predicted Risk")
     fig2, ax2 = plt.subplots()
     sns.scatterplot(data=df, x='age', y='predicted_risk',
-                    hue='chronic_condition_flag', palette="Set2", ax=ax2)
+                    hue='chronic_condition_flag', palette={0: '#FFD100', 1: '#002D72'}, ax=ax2)
     ax2.set_xlabel("Age")
     ax2.set_ylabel("Predicted Risk")
     st.pyplot(fig2)
