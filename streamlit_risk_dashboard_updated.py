@@ -27,7 +27,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("Pediatric Risk of Low-Value Diagnostic Testing")
-st.markdown('<div class="subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>', unsafe_allow_html=True)
+st.markdown("""
+    <h1>Pediatric Risk of Low-Value Diagnostic Testing</h1>
+    <p class="subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</p>
+""", unsafe_allow_html=True)
+
+
 # Load data
 df = pd.read_csv("dashboard_risk_summary_sample.csv")
 
