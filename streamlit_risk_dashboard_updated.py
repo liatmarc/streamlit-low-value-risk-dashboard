@@ -1,36 +1,41 @@
-
 import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Streamlit page config
+# Configure Streamlit page
 st.set_page_config(
     page_title="Pediatric Risk Dashboard",
     layout="wide"
 )
 
-# Custom header
+# Hide Streamlit default title padding (optional)
 st.markdown("""
     <style>
     .main h1 {
-        font-size: 2.5rem;
+        display: none;
+    }
+    .custom-title {
+        font-size: 2.2rem;
+        font-weight: bold;
         color: #0072B5;
         margin-bottom: 0;
     }
-    .main .subtitle {
-        font-size: 1.2rem;
-        color: #555;
+    .custom-subtitle {
+        font-size: 1.1rem;
+        color: #444;
         margin-top: 0;
+        margin-bottom: 1.5rem;
     }
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Pediatric Risk of Low-Value Diagnostic Testing")
+# Custom Title
 st.markdown("""
-    <h1>Pediatric Risk of Low-Value Diagnostic Testing</h1>
-    <p class="subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</p>
+    <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
+    <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
 """, unsafe_allow_html=True)
+
 
 
 # Load data
