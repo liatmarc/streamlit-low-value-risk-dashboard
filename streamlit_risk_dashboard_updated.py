@@ -44,7 +44,7 @@ st.markdown("""
 df = pd.read_csv("dashboard_risk_summary_sample.csv")
 
 st.set_page_config(layout="wide")
-st.title("Pediatric Risk of Low-Value Diagnostic Testing")
+#st.title("Pediatric Risk of Low-Value Diagnostic Testing")
 
 # Sidebar filters
 st.sidebar.header("Filters")
