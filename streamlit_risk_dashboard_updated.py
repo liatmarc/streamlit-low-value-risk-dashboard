@@ -9,17 +9,20 @@ st.set_page_config(
     layout="wide"
 )
 
-# Hide Streamlit default title padding (optional)
+# Style overrides: hide default H1 and apply custom styles
 st.markdown("""
     <style>
-    .main h1 {
-        display: none;
+    /* Hide the automatic title Streamlit adds */
+    h1 {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
     }
     .custom-title {
         font-size: 2.2rem;
-        font-weight: bold;
+        font-weight: 700;
         color: #0072B5;
-        margin-bottom: 0;
+        margin-bottom: 0.2rem;
     }
     .custom-subtitle {
         font-size: 1.1rem;
@@ -28,10 +31,7 @@ st.markdown("""
         margin-bottom: 1.5rem;
     }
     </style>
-""", unsafe_allow_html=True)
 
-# Custom Title
-st.markdown("""
     <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
     <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
 """, unsafe_allow_html=True)
