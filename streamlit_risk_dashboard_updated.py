@@ -10,31 +10,7 @@ st.set_page_config(
 )
 
 # Style overrides: hide default H1 and apply custom styles
-st.markdown("""
-    <style>
-    /* Hide the automatic title Streamlit adds */
-    h1 {
-        visibility: hidden;
-        height: 0;
-        margin: 0;
-    }
-    .custom-title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #0072B5;
-        margin-bottom: 0.2rem;
-    }
-    .custom-subtitle {
-        font-size: 1.1rem;
-        color: #444;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-    </style>
 
-    <div class="custom-title">Pediatric Risk of Low-Value Diagnostic Testing</div>
-    <div class="custom-subtitle">Empowering quality and safety teams to identify diagnostic overuse and promote value-based care in pediatrics.</div>
-""", unsafe_allow_html=True)
 st.markdown("""
     <div style="display: flex; align-items: center; gap: 1rem;">
         <img src="https://www.medstarhealth.org/-/media/project/mho/medstar/logos/medstar-health-logo.png" alt="MedStar Logo" width="180"/>
