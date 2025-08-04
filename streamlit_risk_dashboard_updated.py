@@ -44,6 +44,10 @@ st.markdown("""
 df = pd.read_csv("dashboard_risk_summary_sample.csv")
 
 st.set_page_config(layout="wide")
+st.markdown("""
+    <link rel="icon" href="https://raw.githubusercontent.com/liatmarc/streamlit-low-value-risk-dashboard/main/favicon.png" type="image/png" />
+""", unsafe_allow_html=True)
+
 #st.title("Pediatric Risk of Low-Value Diagnostic Testing")
 
 # Sidebar filters
